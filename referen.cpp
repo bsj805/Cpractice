@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
 	cout<<"the sum val: "<<num1+num2<<endl;
 	*/
 	num1=2;
-	func(num1);
-	cout<<num1;
+	func(num1);  //result num1 becomes 3
+	cout<<num1;  //prints 3
 	return 0;
 }
