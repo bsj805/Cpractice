@@ -19,7 +19,11 @@ int func3(int *arr2)
 	cout<<"*arr2:"<<*arr2<<endl;
 	*arr2+=100;
 }
-
+int func4(int *(&arr))
+{
+	cout<<arr<<endl;
+	cout<<*arr+1<<endl;
+}
 int main(int argc, char** argv) {
 	int num1,num2;
 	/*cin>>num1>>num2;
@@ -44,6 +48,7 @@ int main(int argc, char** argv) {
 	cout<<"pnum의 주솟값"<<pnum1<<endl;  //0x5c1088
 	func3(pnum1);			    //인자로 넘어오는건 0x5c1088  즉 arr2에 pnum1을 그대로 넘겼으니까
 	cout<<pnum1[0]; 		    //*arr2+=100;을 해버렸기 때문에 arr2의 첫번째 인자에 +=100이 됨. 고로 [0]=103
+	func4(pnum1); 		            //func4에 들어가서 +1이 되서 [0]=104
 	delete[] pnum1;
 	
 	return 0;
